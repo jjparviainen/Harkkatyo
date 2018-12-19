@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input your personal information here!"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/defaultName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="8dp"/>
+
+    <EditText
+        android:id="@+id/defaultEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/defaultPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone number"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="400dp"
+        android:text="SAVE"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/checkBookings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="400dp"
+        android:text="check bookings"
+        android:textSize="20dp" />
+
+</RelativeLayout>

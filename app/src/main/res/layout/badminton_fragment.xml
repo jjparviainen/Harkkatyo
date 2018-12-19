@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <Spinner
+        android:id="@+id/dateSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+    </Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book a time for badminton!"
+        android:textSize="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="55dp"/>
+
+
+    <Button
+        android:id="@+id/button800"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="90dp"/>
+
+    <Button
+        android:id="@+id/button900"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="90dp"/>
+
+    <Button
+        android:id="@+id/button1000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="90dp"/>
+
+    <Button
+        android:id="@+id/button1100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="160dp"/>
+
+    <Button
+        android:id="@+id/button1200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="160dp"/>
+
+    <Button
+        android:id="@+id/button1300"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13:00"
+        android:textSize="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="160dp"/>
+
+</RelativeLayout>
