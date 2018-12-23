@@ -37,7 +37,6 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.badminton_fragment, container, false);
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -65,11 +64,10 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
         Fragment fragment = null;
         switch (view.getId()) {
             case R.id.button800:
-                String time800 = "8:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
-                // Lähetetään tämä tieto jotta BookingFragment tietä mistä lajista varataan aikaa
+                String time800 = "8:00"; // This is sent to BookingFragment
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
+                // Info of the button pressed sent to BookingsFragment
                 Bundle bundle = new Bundle();
                 bundle.putString("button", time800);
                 bundle.putInt("selectedDate", datePicked);
@@ -80,10 +78,9 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.button900:
-                String time900 = "9:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
+                String time900 = "9:00";
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
                 bundle = new Bundle();
                 bundle.putString("button", time900);
                 bundle.putInt("selectedDate", datePicked);
@@ -94,11 +91,10 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.button1000:
-                String time1000 = "10:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
-                // Lähetetään tämä tieto jotta BookingFragment tietä mistä lajista varataan aikaa
+                String time1000 = "10:00";
+
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
                 bundle = new Bundle();
                 bundle.putString("button", time1000);
                 bundle.putInt("selectedDate", datePicked);
@@ -109,10 +105,9 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.button1100:
-                String time1100 = "11:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
+                String time1100 = "11:00";
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
                 bundle = new Bundle();
                 bundle.putString("button", time1100);
                 bundle.putInt("selectedDate", datePicked);
@@ -123,11 +118,10 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.button1200:
-                String time1200 = "12:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
-                // Lähetetään tämä tieto jotta BookingFragment tietä mistä lajista varataan aikaa
+                String time1200 = "12:00";
+
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
                 bundle = new Bundle();
                 bundle.putString("button", time1200);
                 bundle.putInt("selectedDate", datePicked);
@@ -138,10 +132,9 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.button1300:
-                String time1300 = "13:00"; // Tämä lähetetään BookingsFragmentille jotta aika saadaan oikein
+                String time1300 = "13:00";
                 fragment = new BookingFragment();
 
-                // Lähetetään painetun napin tiedot BookingFragmentille
                 bundle = new Bundle();
                 bundle.putString("button", time1300);
                 bundle.putInt("selectedDate", datePicked);
@@ -201,10 +194,6 @@ public class BadmintonFragment extends Fragment implements View.OnClickListener 
             }
         });
 
-    }
-
-    public int getDatePicked(){
-        return datePicked;
     }
 
     public void replaceFragment(Fragment selectedFragment) {

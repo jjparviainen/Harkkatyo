@@ -20,9 +20,7 @@ public class CheckBookings extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.check_bookings, container, false);
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -38,6 +36,8 @@ public class CheckBookings extends Fragment {
         listBookingsToTextViewBadminton();
     }
 
+
+    // The following three methods are used to write the bookings from all sports to the textview in this fragment
     public void listBookingsToTextViewFloorball(){
         for(int i=0; i<floorball.bookings.size();i++ ){
             listBookings.append(floorball.bookings.get(i).getDate()+ "\n");

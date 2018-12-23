@@ -1,8 +1,6 @@
 package com.example.ett15084.harkkatyo;
 
-
-
-// Tässä luokassa luodaan uusi Booking-olio eli varaus joka sisältää kaikki tarvittavat tiedot
+// This class is used to create a Bookings-object
 
 public class Bookings {
 

@@ -9,7 +9,10 @@ public class DateHandler {
 
     private static DateHandler dateHandler = new DateHandler();
 
-    // Luokan tarkoitus on pitää kirjaa päivistä joilla spinner täytetään
+    // This class gets the dates for the date spinner
+
+
+    // This arrayist holds the dates and from this the spinner is populated
     ArrayList dates = new ArrayList();
 
     public ArrayList setDatesArray(){

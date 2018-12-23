@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = MainActivity.this;
-        System.out.println("###################################################################### Kansio on: " + context.getFilesDir());
+        System.out.println("###################################################################### Folder is: " + context.getFilesDir());
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -38,36 +38,26 @@ public class MainActivity extends AppCompatActivity {
 
             switch (menuItem.getItemId()){
                 case R.id.nav_floorball:
-                    //new FloorballFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FloorballFragment()).commit();
-
-                    //selectedFragment = floorballFragment;
                     break;
 
                 case R.id.nav_badminton:
-                    //selectedFragment = badmintonFragment;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BadmintonFragment()).commit();
                     break;
 
                 case R.id.nav_squash:
-                    //selectedFragment = squashFragment;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SquashFragment()).commit();
                     break;
 
                 case R.id.nav_myInfo:
-                    //selectedFragment = myInfoFragment;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyInfoFragment()).commit();
                     break;
             }
-
-            //Käynnistää valitun fragmentin
-            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
-
             return true;
-
         }
     };
 
+    // Returns the context which is needed in many of the fragments
     public static Context getInstance(){
         return context;
     }

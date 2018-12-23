@@ -45,7 +45,6 @@ public class BookingFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.booking_fragment, container, false);
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
@@ -53,7 +52,7 @@ public class BookingFragment extends Fragment {
 
         removeBookingButton = getView().findViewById(R.id.removeBookingButton);
 
-        //Otetaan tieto mitä nappia painettiin ja minä päivänä
+        // Info on the button pressed and date is received fomr the sport fragments
         selectedTimeButton = getArguments().getString("button");
         selectedDateInSpinner = getArguments().getInt("selectedDate");
         sport = getArguments().getString("sport");
@@ -100,6 +99,7 @@ public class BookingFragment extends Fragment {
         getPhoneNumber();
 
 
+        // Activates when "BOOK!" button is pressed.
         bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,6 +128,7 @@ public class BookingFragment extends Fragment {
             }
         });
 
+        // Activates when "REMOVE BOOKING" button is pressed
         removeBookingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,6 +164,7 @@ public class BookingFragment extends Fragment {
         });
     }
 
+    // Checks whether a certain time is booked or not and based on that info disables/enables the remove booking button
     public void setRemoveButtonEnabledFloorball(){
         removeBookingButton.setEnabled(false);
         if(selectedDateInSpinner == 0){
@@ -486,10 +488,7 @@ public class BookingFragment extends Fragment {
 
     }
 
-    // Tämäkin metodi tarvitsee itseasiassa tiedon siitä, jotta missä päivässä ollaan.
-    // Eli riittänee että valitun päivän id tuodaan myös jotakin kautta tänne jotta väri vaihtuu
-    // oikeaan ArrayListiin. Mahdollisesti täyteen if lauseita tämäkin ellei jotenkin voitaisi palauttaa
-    // oikea tieto.
+    // Sets the colors of the buttons based on their reservations every time floorball fragment is started
     public void changeColorFloorball(String color){
         if(selectedDateInSpinner == 0){
             if(selectedTimeButton.equals("8:00")){
@@ -593,6 +592,7 @@ public class BookingFragment extends Fragment {
         }
     }
 
+    // Sets the colors of the buttons based on their reservations every time badminton fragment is started
     public void changeColorBadminton(String color){
         if(selectedDateInSpinner == 0){
             if(selectedTimeButton.equals("8:00")){
@@ -696,6 +696,7 @@ public class BookingFragment extends Fragment {
         }
     }
 
+    // Sets the colors of the buttons based on their reservations every time squash fragment is started
     public void changeColorSquash(String color){
         if(selectedDateInSpinner == 0){
             if(selectedTimeButton.equals("8:00")){

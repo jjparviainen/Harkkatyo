@@ -15,16 +15,13 @@ public class Squash {
 
     private static Squash squash = new Squash();
 
-    // Tämä lista pitää kirjaa kaikista varauksista squash-saliin
-    // Näitäkin tarvitaan luultavasti oma lista jokaiselle päivälle
-
+    // List for all the bookings-objects
     ArrayList<Bookings> bookings = new ArrayList();
 
     Context context;
     int laskuri = 0;
 
-    // Tämä lista pitää kirjaa nappuloiden väristä, eli onko varattu
-    // Näitäkin yksi lista per päivä
+    // ArrayLists for the button colors
     ArrayList <String> ButtonsDay0 = new ArrayList();
     ArrayList <String> ButtonsDay1 = new ArrayList();
     ArrayList <String> ButtonsDay2 = new ArrayList();
@@ -36,7 +33,7 @@ public class Squash {
         System.out.println(bookingObject.getName() + bookingObject.getEmail() + bookingObject.getPhoneNumber() + bookingObject.getDate() + bookingObject.getTimeBooked());
     }
 
-    // Nyt on ihan android write to xml ohjeet käytössä
+    // Writes the info of the bookings to an XML-file
     public void writeXML3(String nameWritten, String emailWritten, String numberWritten, String selectedTime, String selectedDate){
         XmlSerializer serializer = Xml.newSerializer();
         serializer.setFeature("http://xmlpull.org/v1/doc/features.html#indent-output", true);
@@ -100,7 +97,7 @@ public class Squash {
 
     }
 
-    // Muodostetaan ArrayListit jokaisen päivän nappuloiden väreistä. Alustetaan vihreiksi koska aluksi tietenkin kaikki ajat vapaat alussa.
+    // ArrayLists keeping track of the color of the button for all the days. Initiated green as initially all times are available
     public void addButtonColor(){
         ButtonsDay0.add("Green");
         ButtonsDay0.add("Green");
@@ -139,7 +136,7 @@ public class Squash {
         ButtonsDay4.add("Green");
     }
 
-    // Tämä metodi saa valitun päivämäärän id:n floorballFragmentistä ja sen perusteella palauttaa oikean päivän ArrayListin (eli täyteen if-lauseita tämä)
+    // Method recieves the id of the chosen date and based on that return the ArrayList of the correct day
     public ArrayList getButtonColor(int selectedItemInSpinner){
         if (selectedItemInSpinner == 0){
             return ButtonsDay0;
@@ -156,9 +153,6 @@ public class Squash {
         else if(selectedItemInSpinner ==4){
             return ButtonsDay4;
         }
-        /*for (int i = 0; i < floorballButtonsDay0.size(); i++) {
-            System.out.println(floorballButtonsDay0.get(i));
-        }*/
         else {
             return ButtonsDay0;
         }

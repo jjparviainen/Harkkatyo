@@ -51,7 +51,6 @@ public class MyInfoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.myinfo_fragment, container, false);
-        //return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
